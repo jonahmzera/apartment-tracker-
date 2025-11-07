@@ -1,0 +1,53 @@
+:root{
+  --bg:#f6f8fb;
+  --accent:#0a9396;
+  --accent-2:#005f73;
+  --muted:#6c757d;
+  --card:#ffffff;
+  --success:#10b981;
+  --danger:#ef4444;
+  --max-width:980px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;background:var(--bg);color:#0b1320}
+.wrap{max-width:var(--max-width);margin:0 auto;padding:20px}
+
+.site-header{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:#fff;padding:28px 0}
+.site-header h1{margin:0;font-size:1.5rem}
+.sub{opacity:.9;margin-top:6px;font-size:0.95rem}
+
+.nav{background:#fff;border-bottom:1px solid #e6eef2;box-shadow:0 1px 0 rgba(10,10,10,0.02)}
+.nav-row{display:flex;align-items:center;gap:8px;padding:10px 0}
+.nav-btn{background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600}
+.nav-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border-color:rgba(255,255,255,0.08)}
+.spacer{flex:1}
+.small-note{font-size:0.9rem;color:var(--muted)}
+
+main{padding:26px 0}
+
+/* Dashboard cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(14,30,37,0.06)}
+.card h3{margin:0;font-size:0.95rem;color:var(--muted)}
+.card .value{font-size:1.6rem;font-weight:700;margin-top:8px}
+
+/* Tenant table */
+.table-wrap{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(14,30,37,0.04)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:10px 8px;text-align:left;border-bottom:1px solid #f1f5f9}
+th{font-size:.85rem;color:var(--muted);font-weight:700}
+
+/* Complaint form */
+.form-row{margin-bottom:12px}
+input[type="text"],textarea,select{width:100%;padding:10px;border:1px solid #e6eef2;border-radius:8px;font-size:0.96rem;background:#fbfcfe}
+button.primary{background:var(--accent);color:#fff;border:none;padding:10px 16px;border-radius:8px;cursor:pointer;font-weight:700}
+.resp{margin-top:10px}
+
+/* small screens */
+@media (max-width:800px){
+  .cards{grid-template-columns:repeat(1,1fr)}
+  .nav-row{flex-wrap:wrap}
+  .small-note{display:block;width:100%;margin-top:8px}
+}
